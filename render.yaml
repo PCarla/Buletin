@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: buletin
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: EMAIL_USER
+        value: your_email@example.com
+      - key: EMAIL_PASS
+        value: your_email_password
+      - key: TO_EMAIL
+        value: recipient@example.com
